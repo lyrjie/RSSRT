@@ -39,6 +39,8 @@ class ChannelListViewModel(application: Application) : AndroidViewModel(applicat
                 if (it.isNotBlank()) {
                     val result = rssRepository.createChannel(it)
                     toastMessage.postValue(getCreationResultMessage(result))
+                    if (result == ChannelCreationResult.CREATED)
+                        isSourceInputClearRequired.postValue(true)
                 }
             }
         }
