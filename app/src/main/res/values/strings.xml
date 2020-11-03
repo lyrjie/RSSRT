@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RSSRT</string>
+    <string name="add">Add</string>
+    <string name="channel_added">Channel added</string>
+    <string name="channel_present">You are already subscribed to this channel</string>
+    <string name="url_not_rss">Provided URL doesn\'t provide RSS feed</string>
+    <string name="example_item_description">Сегодня, в преддверии старта набора на новый поток <a href="https://skillfactory.ru/ml-programma-machine-learning-online?utm_source=infopartners&amp;utm_medium=habr&amp;utm_campaign=habr_ML&amp;utm_term=regular&amp;utm_content=021120" rel="nofollow">курса «Machine Learning»</a>, делимся с вами переводом поста из блога PyTorch, в котором рассказывается о работе ИИ для борьбы с вредителями, который анализирует ситуацию по фотографиям феромоновых ловушек в условиях индийской глубинки, где выращивают хлопок, о применении PyTorch Mobile для развертывания моделей прямо на смартфоне в оффлайне, о сжатии моделей и, конечно, немного о том, как работать с аномальными изображениями, которые отправляют индийские фермеры.<br/> <br/> <a href="https://habr.com/ru/topic/edit/525514/"><img src="https://habrastorage.org/webt/hs/dz/aw/hsdzaw19kk6bs1wcbqdqpazaxwi.jpeg" alt="image"/></a><br/><a href="https://habr.com/ru/post/525514/?utm_campaign=525514&amp;utm_source=habrahabr&amp;utm_medium=rss#habracut">Приятного чтения!</a></string>
+    <string name="refresh">Refresh</string>
+</resources>
