@@ -16,9 +16,11 @@ class RssRepository(private val database: RssDatabase) {
 
     suspend fun refreshChannel(channelId: Long) {
         val channel = database.rssDao.getChannelById(channelId)
-        fetchChannel(channel.url)?.let { channelData ->
-            updateChannel(channelData, channelId, channel.url)
-            persistChannelItems(channelId, channelData)
+        channel?.let {
+            fetchChannel(channel.url)?.let { channelData ->
+                updateChannel(channelData, channelId, channel.url)
+                persistChannelItems(channelId, channelData)
+            }
         }
     }
 

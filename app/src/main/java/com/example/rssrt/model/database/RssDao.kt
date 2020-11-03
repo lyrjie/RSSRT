@@ -13,7 +13,7 @@ interface RssDao {
     suspend fun getChannels(): List<Channel>
 
     @Query("select * from channel where id = :id")
-    suspend fun getChannelById(id: Long): Channel
+    suspend fun getChannelById(id: Long): Channel?
 
     @Query("select * from item where channelId = :channelId")
     fun getChannelItems(channelId: Long): LiveData<List<Item>>
