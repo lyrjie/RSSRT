@@ -1,8 +1,6 @@
 package com.example.rssrt.model.network
 
-import org.simpleframework.xml.Element
-import org.simpleframework.xml.ElementList
-import org.simpleframework.xml.Root
+import org.simpleframework.xml.*
 
 @Root(name = "rss", strict = false)
 data class RssFeed @JvmOverloads constructor(
@@ -17,7 +15,8 @@ data class RssChannel @JvmOverloads constructor(
     @field:ElementList(name = "items", inline = true)
     var items: List<RssItem> = mutableListOf(),
 
-    @field:Element(name = "title")
+    @field:Path("title")
+    @field:Text(required = false)
     var title: String? = null,
 
     @field:Element(name = "description")
@@ -27,10 +26,12 @@ data class RssChannel @JvmOverloads constructor(
 @Root(name = "item", strict = false)
 data class RssItem @JvmOverloads constructor(
 
-    @field:Element(name = "title")
+    @field:Path("title")
+    @field:Text(required = false)
     var title: String? = null,
 
-    @field:Element(name = "link")
+    @field:Path("link")
+    @field:Text(required = false)
     var link: String? = null,
 
     @field:Element(name = "description")

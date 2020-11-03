@@ -46,7 +46,7 @@ class RssRepository(private val database: RssDatabase) {
         val channelData = fetchChannel(rssUrl)
         val channel = channelData?.channel?.toDomain(rssUrl) ?: return ChannelCreationResult.NOT_RSS
         val channelId = database.rssDao.addChannel(channel)
-        persistChannelItems(channel.id, channelData)
+        persistChannelItems(channelId, channelData)
         return if (channelId == NO_ROWS_AFFECTED_RESULT) ChannelCreationResult.ALREADY_PRESENT else ChannelCreationResult.CREATED
     }
 
